@@ -1,0 +1,124 @@
+versión de Gretl 2025b
+Sesión actual: 2025-07-12 00:23
+
+# ===============================
+# BLOQUE ÚNICO: Proyección Julio + Sensación térmica
+# ===============================
+# 1. Estimación sobre obs. 2–30
+? smpl 2 30
+Rango de datos completo: 
+
+# Derivadas físicas
+
+
+Modelo 19: MCO, usando las observaciones 2-30 (T = 29)
+Variable dependiente: temp_min
+
+               coeficiente  Desv. típica  Estadístico t   valor p 
+  ----------------------------------------------------------------
+  const         8.24844      0.122123        67.54       5.91e-028 ***
+  d_rad         0.0454417    0.0139768        3.251      0.0035    ***
+  d_humedad    −0.118745     0.164359        −0.7225     0.4773   
+  d_viento      1.06872      2.13275          0.5011     0.6211   
+  d_nubosidad   0.0627711    0.145989         0.4300     0.6712   
+  d_presion    −2.07892      0.822775        −2.527      0.0188    **
+
+Media de la vble. dep.  8.310345   D.T. de la vble. dep.   0.760801
+Suma de cuad. residuos  7.487064   D.T. de la regresión    0.570548
+R-cuadrado              0.538032   R-cuadrado corregido    0.437604
+F(5, 23)                5.357404   Valor p (de F)          0.002077
+Log-verosimilitud      −21.51449   Criterio de Akaike      55.02898
+Criterio de Schwarz     63.23276   Crit. de Hannan-Quinn   57.59830
+rho                     0.589016   Durbin-Watson           0.816417
+
+Sin considerar la constante, el valor p más alto fue el de la variable 17 (d_nubosidad)
+
+
+Modelo 20: MCO, usando las observaciones 2-30 (T = 29)
+Variable dependiente: temp_max
+
+               coeficiente  Desv. típica  Estadístico t   valor p 
+  ----------------------------------------------------------------
+  const        23.2289       0.262322        88.55       1.19e-030 ***
+  d_rad         0.0774789    0.0300223        2.581      0.0167    **
+  d_humedad    −0.298644     0.353046        −0.8459     0.4063   
+  d_viento      6.23017      4.58118          1.360      0.1870   
+  d_nubosidad  −0.364421     0.313587        −1.162      0.2571   
+  d_presion     0.745523     1.76733          0.4218     0.6771   
+
+Media de la vble. dep.  23.31034   D.T. de la vble. dep.   1.391388
+Suma de cuad. residuos  34.54503   D.T. de la regresión    1.225544
+R-cuadrado              0.362719   R-cuadrado corregido    0.224179
+F(5, 23)                2.618164   Valor p (de F)          0.051441
+Log-verosimilitud      −43.68625   Criterio de Akaike      99.37251
+Criterio de Schwarz     107.5763   Crit. de Hannan-Quinn   101.9418
+rho                     0.709190   Durbin-Watson           0.450005
+
+Sin considerar la constante, el valor p más alto fue el de la variable 18 (d_presion)
+
+
+Modelo 21: MCO, usando las observaciones 2-30 (T = 29)
+Variable dependiente: temp_media
+
+               coeficiente  Desv. típica  Estadístico t   valor p 
+  ----------------------------------------------------------------
+  const        15.7387       0.180486        87.20       1.70e-030 ***
+  d_rad         0.0614603    0.0206564        2.975      0.0068    ***
+  d_humedad    −0.208694     0.242908        −0.8592     0.3991   
+  d_viento      3.64945      3.15201          1.158      0.2588   
+  d_nubosidad  −0.150825     0.215758        −0.6990     0.4915   
+  d_presion    −0.666697     1.21598         −0.5483     0.5888   
+
+Media de la vble. dep.  15.81034   D.T. de la vble. dep.   0.994752
+Suma de cuad. residuos  16.35329   D.T. de la regresión    0.843216
+R-cuadrado              0.409775   R-cuadrado corregido    0.281466
+F(5, 23)                3.193644   Valor p (de F)          0.024685
+Log-verosimilitud      −32.84265   Criterio de Akaike      77.68530
+Criterio de Schwarz     85.88908   Crit. de Hannan-Quinn   80.25462
+rho                     0.717468   Durbin-Watson           0.482340
+
+Sin considerar la constante, el valor p más alto fue el de la variable 18 (d_presion)
+
+
+
+# 3. Visualización resumida
+
+🌡 Proyección Julio (obs. 31–61): Tmin | Tmax | Tmedia | STmin
+Día     Tmin (°C)   Tmax (°C)   Tmedia (°C)  STmin (°C)
+? loop i = 31..61
+> endloop
+31            7.55       28.27       17.91        6.25
+32            8.02       22.84       15.43        6.80
+33            8.02       22.84       15.43        6.80
+34            8.02       22.84       15.43        6.80
+35            8.02       22.84       15.43        6.80
+36            8.02       22.84       15.43        6.80
+37            8.02       22.84       15.43        6.80
+38            8.25       23.23       15.74        7.07
+39            8.48       23.62       16.05        7.33
+40            8.48       23.62       16.05        7.33
+41            8.48       23.62       16.05        7.33
+42            8.48       23.62       16.05        7.33
+43            8.48       23.62       16.05        7.33
+44            8.48       23.62       16.05        7.33
+45            8.48       23.62       16.05        7.33
+46            8.48       23.62       16.05        7.33
+47            8.25       23.23       15.74        7.07
+48            8.02       22.84       15.43        6.80
+49            8.02       22.84       15.43        6.80
+50            8.02       22.84       15.43        6.80
+51            8.02       22.84       15.43        6.80
+52            8.02       22.84       15.43        6.80
+53            8.02       22.84       15.43        6.80
+54            8.02       22.84       15.43        6.80
+55            8.02       22.84       15.43        6.80
+56            8.25       23.23       15.74        7.07
+57            8.25       23.23       15.74        7.07
+58            8.25       23.23       15.74        7.07
+59            8.25       23.23       15.74        7.07
+60            8.25       23.23       15.74        7.07
+61            8.25       23.23       15.74        7.07
+# Aseguramos estar en la muestra proyectada
+
+
+# Graficamos las cuatro curvas juntas
